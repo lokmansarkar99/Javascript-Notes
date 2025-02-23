@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation & Event Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #myElement {
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
+        #myButton {
+            padding: 10px 20px;
+            background-color: lightcoral;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .myClass {
+            font-size: 20px;
+            color: darkblue;
+        }
+        .dynamic-element {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation & Event Handling Example</h1>
+
+    <!-- Selecting Elements Example -->
+    <div id="myElement">This is a div with id="myElement".</div>
+    <button id="myButton">Click Me</button>
+
+    <!-- Modifying Elements Example -->
+    <div id="myContainer">
+        <p>Initial text content.</p>
+    </div>
+
+    <!-- Event Handling Example -->
+    <input type="text" id="keyInput" placeholder="Press any key...">
+    
+    <!-- Event Delegation Example -->
+    <div id="parent">
+        <button class="child">Child Button 1</button>
+        <button class="child">Child Button 2</button>
+    </div>
+
+    <h3>Modify Dynamic Content Below:</h3>
+    <div id="dynamicContent"></div>
+
+    <script src="./004-Event_Delegation_Bubbling.js"></script> <!-- External JS File for DOM Manipulation -->
+
+</body>
+</html>

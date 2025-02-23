@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6+ Features</title>
+</head>
+<body>
+    <h1>Open Console (F12) to See Output</h1>
+    
+    <script>
+        // let & const
+        let age = 25;
+        const name = "Alice";
+
+        // Arrow Function
+        const greet = () => console.log(`Hello, ${name}`);
+
+        // Template Literal
+        console.log(`My name is ${name} and I am ${age} years old.`);
+
+        // Default Parameters
+        const multiply = (a, b = 2) => a * b;
+        console.log(multiply(5)); // 10
+
+        // Destructuring
+        const user = { username: "Alice", score: 100 };
+        const { username, score } = user;
+        console.log(username, score);
+
+        // Spread Operator
+        const arr1 = [1, 2, 3];
+        const arr2 = [...arr1, 4, 5];
+        console.log(arr2);
+
+        // Optional Chaining
+        const person = { address: { city: "New York" } };
+        console.log(person.address?.city); // New York
+        console.log(person.address?.zip); // undefined
+
+        // Nullish Coalescing
+        let points = null;
+        console.log(points ?? 50); // 50
+    </script>
+</body>
+</html>

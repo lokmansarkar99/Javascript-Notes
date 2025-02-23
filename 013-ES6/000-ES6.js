@@ -1,0 +1,2 @@
+// What is ES6?
+// ES6 (ECMAScript 2015) introduced modern JavaScript features that improve code readability, performance, and maintainability. It includes let & const, arrow functions, template literals, destructuring, and more.

@@ -1,0 +1,67 @@
+<!-- Full Example with All BOM Features -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Example</title>
+</head>
+<body>
+    <h1>JavaScript Browser Object Model (BOM) Examples</h1>
+
+    <div>
+        <p>Screen Width: <span id="screenWidth"></span></p>
+        <p>Screen Height: <span id="screenHeight"></span></p>
+        <p>Browser Language: <span id="language"></span></p>
+        <p>User-Agent: <span id="userAgent"></span></p>
+        <p>Current URL: <span id="currentURL"></span></p>
+    </div>
+
+    <button id="geoButton">Get Geolocation</button>
+    <div id="geoResult"></div>
+
+    <script>
+        // screen object example
+        document.getElementById('screenWidth').textContent = screen.width;
+        document.getElementById('screenHeight').textContent = screen.height;
+
+        // navigator object example
+        document.getElementById('language').textContent = navigator.language;
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+
+        // location object example
+        document.getElementById('currentURL').textContent = location.href;
+
+        // Geolocation example
+        document.getElementById('geoButton').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById('geoResult').textContent =
+                        'Latitude: ' + position.coords.latitude + ', Longitude: ' + position.coords.longitude;
+                }, function(error) {
+                    document.getElementById('geoResult').textContent = 'Error fetching geolocation: ' + error.message;
+                });
+            } else {
+                document.getElementById('geoResult').textContent = "Geolocation is not available in your browser.";
+            }
+        });
+
+        // setTimeout example
+        setTimeout(function() {
+            alert("This alert appears after 5 seconds.");
+        }, 5000);
+
+        // setInterval example
+        let count = 0;
+        const intervalId = setInterval(function() {
+            console.log("This is logged every 2 seconds.");
+            count++;
+            if (count === 5) {
+                clearInterval(intervalId); // Stops the interval after 5 logs
+                console.log("Interval cleared after 5 seconds.");
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
